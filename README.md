@@ -229,3 +229,43 @@ Berikut adalah contoh sederhana dari file XML yang mengatur tampilan dasar dalam
 
 - **Button**:
   - Tombol dengan teks "Submit" yang ditempatkan di tengah dan memiliki margin atas 16dp dari elemen sebelumnya.
+
+#### Contoh Tampilan XML dengan penjelasan 
+```xml
+
+  <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"  <!-- Elemen mengambil seluruh lebar dari elemen induknya -->
+    android:layout_height="match_parent" <!-- Elemen mengambil seluruh tinggi dari elemen induknya -->
+    android:orientation="vertical"       <!-- Mengatur tata letak elemen anak secara vertikal -->
+    android:padding="16dp">              <!-- Menambahkan padding 16dp di semua sisi elemen -->
+
+    <!-- Elemen TextView untuk menampilkan teks judul -->
+    <TextView
+        android:id="@+id/textViewTitle"  <!-- Memberikan ID unik untuk TextView ini -->
+        android:layout_width="wrap_content"  <!-- TextView akan menyesuaikan lebar sesuai dengan konten -->
+        android:layout_height="wrap_content" <!-- TextView akan menyesuaikan tinggi sesuai dengan konten -->
+        android:text="Welcome to My App"  <!-- Teks yang akan ditampilkan di TextView -->
+        android:textSize="24sp"           <!-- Ukuran teks sebesar 24sp (scale-independent pixels) -->
+        android:textColor="#000000"       <!-- Warna teks hitam (hexadecimal color code) -->
+        android:gravity="center"/>        <!-- Menempatkan teks di tengah TextView -->
+
+    <!-- Elemen EditText untuk input teks dari pengguna -->
+    <EditText
+        android:id="@+id/editTextName"    <!-- Memberikan ID unik untuk EditText ini -->
+        android:layout_width="match_parent"  <!-- EditText mengambil seluruh lebar induknya -->
+        android:layout_height="wrap_content" <!-- EditText akan menyesuaikan tinggi sesuai dengan konten -->
+        android:hint="Enter your name"    <!-- Teks petunjuk yang ditampilkan sebelum pengguna mengetik -->
+        android:inputType="text"/>        <!-- Menentukan bahwa input adalah teks biasa -->
+
+    <!-- Elemen Button untuk menambahkan aksi pada tampilan -->
+    <Button
+        android:id="@+id/buttonSubmit"    <!-- Memberikan ID unik untuk Button ini -->
+        android:layout_width="wrap_content"  <!-- Button akan menyesuaikan lebar sesuai dengan teks di dalamnya -->
+        android:layout_height="wrap_content" <!-- Button akan menyesuaikan tinggi sesuai dengan teks di dalamnya -->
+        android:text="Submit"             <!-- Teks yang akan ditampilkan pada Button -->
+        android:layout_gravity="center"   <!-- Menempatkan Button di tengah elemen induknya -->
+        android:layout_marginTop="16dp"/> <!-- Menambahkan margin atas sebesar 16dp dari elemen sebelumnya -->
+
+</LinearLayout>
+```
